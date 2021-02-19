@@ -49,4 +49,9 @@ public class Main {
             }
         }
     }
+    public static void printDeadlinesUsingStreams(ArrayList<Task> tasks) {
+        tasks.stream() //if t is instance of Deadline then print
+                .filter((t) -> t instanceof Deadline) //predicate; lambda
+                .forEach(System.out::println);
+    }
 }
